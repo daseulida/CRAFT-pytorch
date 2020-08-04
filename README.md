@@ -2,7 +2,6 @@
 
 ## Qbang-text anal module part 1 : 이미지 바운딩 박스 생성
 
-- 저는 anaconda 가상환경을 사용합니다.
 
 #### 버전 요구사항
 - PyTorch>=0.4.1
