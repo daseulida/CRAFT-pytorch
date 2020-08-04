@@ -1,6 +1,7 @@
 
 
-## install 필요한 항목
+## Qbang-text anal module part 1 : 이미지 바운딩 박스 생성
+
 - 저는 anaconda 가상환경을 사용합니다.
 
 #### 버전 요구사항
@@ -24,9 +25,9 @@ pip install -r requirements.txt
 python test.py --trained_model=qbang_model/craft_mlt_25k.pth --test_folder=test
 ```
 
-The result image and socre maps will be saved to `./result` by default.
+결과영상 저장 directory :  `./result` (by default)
 
-### Arguments
+### Arguments 설명 
 * `--trained_model`: pretrained model
 * `--text_threshold`: text confidence threshold
 * `--low_text`: text low-bound score
@@ -41,20 +42,7 @@ The result image and socre maps will be saved to `./result` by default.
 * `--refiner_model`: pretrained refiner model
 
 
-## Links
-- WebDemo : https://demo.ocr.clova.ai/
-- Repo of recognition : https://github.com/clovaai/deep-text-recognition-benchmark
 
-## Citation
-```
-@inproceedings{baek2019character,
-  title={Character Region Awareness for Text Detection},
-  author={Baek, Youngmin and Lee, Bado and Han, Dongyoon and Yun, Sangdoo and Lee, Hwalsuk},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={9365--9374},
-  year={2019}
-}
-```
 
 ## License
 ```
