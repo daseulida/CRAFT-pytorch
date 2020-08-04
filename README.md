@@ -1,50 +1,27 @@
-## CRAFT: Character-Region Awareness For Text detection
-Official Pytorch implementation of CRAFT text detector | [Paper](https://arxiv.org/abs/1904.01941) | [Pretrained Model](https://drive.google.com/open?id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ) | [Supplementary](https://youtu.be/HI8MzpY8KMI)
-
-**[Youngmin Baek](mailto:youngmin.baek@navercorp.com), Bado Lee, Dongyoon Han, Sangdoo Yun, Hwalsuk Lee.**
- 
-Clova AI Research, NAVER Corp.
-
-### Sample Results
-
-### Overview
-PyTorch implementation for CRAFT text detector that effectively detect text area by exploring each character region and affinity between characters. The bounding box of texts are obtained by simply finding minimum bounding rectangles on binary map after thresholding character region and affinity scores. 
-
-<img width="1000" alt="teaser" src="./figures/craft_example.gif">
-
-## Updates
-**13 Jun, 2019**: Initial update
-**20 Jul, 2019**: Added post-processing for polygon result
-**28 Sep, 2019**: Added the trained model on IC15 and the link refiner
 
 
-## Getting started
-### Install dependencies
-#### Requirements
+## install 필요한 항목
+- 저는 anaconda 가상환경을 사용합니다.
+
+#### 버전 요구사항
 - PyTorch>=0.4.1
 - torchvision>=0.2.1
 - opencv-python>=3.4.2
 - check requiremtns.txt
+
+<requirement install 실행문>
 ```
 pip install -r requirements.txt
 ```
 
-### Training
-The code for training is not included in this repository, and we cannot release the full training code for IP reason.
 
-
-### Test instruction using pretrained model
-- Download the trained models
- 
- *Model name* | *Used datasets* | *Languages* | *Purpose* | *Model Link* |
- | :--- | :--- | :--- | :--- | :--- |
-General | SynthText, IC13, IC17 | Eng + MLT | For general purpose | [Click](https://drive.google.com/open?id=1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ)
-IC15 | SynthText, IC15 | Eng | For IC15 only | [Click](https://drive.google.com/open?id=1i2R7UIUqmkUtF0jv_3MXTqmQ_9wuAnLf)
-LinkRefiner | CTW1500 | - | Used with the General Model | [Click](https://drive.google.com/open?id=1XSaFwBkOaFOdtk4Ane3DFyJGPRw6v5bO)
-
-* Run with pretrained model
+* 학습된 모델 directory : ./qbang_model/craft_mlt_25k.pth
+* 테스트할 영상은  directory : ./test
+  에 넣어주시면 됩니다.
+  
+<이미지 테스트 실행문>  
 ``` (with python 3.7)
-python test.py --trained_model=[weightfile] --test_folder=[folder path to test images]
+python test.py --trained_model=qbang_model/craft_mlt_25k.pth --test_folder=test
 ```
 
 The result image and socre maps will be saved to `./result` by default.
