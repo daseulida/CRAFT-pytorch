@@ -15,7 +15,9 @@ pip install -r requirements.txt
 ```
 
 
-* 학습된 모델 directory : ./qbang_model/craft_mlt_25k.pth
+* 학습된 모델 craft_mlt_25k.pth 은  directory : ./qbang_model
+에 넣어주시면 됩니다.
+
 * 테스트할 영상은  directory : ./test
   에 넣어주시면 됩니다.
   
