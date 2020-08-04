@@ -21,7 +21,7 @@ pip install -r requirements.txt
   
 <이미지 테스트 실행문>  
 ``` (with python 3.7)
-python test.py --trained_model=qbang_model/craft_mlt_25k.pth --test_folder=test
+python test.py --trained_model=qbang_model/craft_mlt_25k.pth --test_folder=test --cuda false
 ```
 
 결과영상 저장 directory :  `./result` (by default)
